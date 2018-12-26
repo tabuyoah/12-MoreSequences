@@ -404,8 +404,12 @@ def rectangles_from_circles(circles):
     rect = []
     for k in range(len(circles)):
         circ = circles[k]
-        circ.attach_to()
-        rect = rg.Rectangle()
+        r = circ.radius
+        c1 = rg.Point(circ.center.x - r, circ.center.y - r)
+        c2 = rg.Point(circ.center.x + r, circ.center.y + r)
+        rect = rect + [rg.Rectangle(c1, c2)]
+
+    return rect
 
 
 # -----------------------------------------------------------------------------
