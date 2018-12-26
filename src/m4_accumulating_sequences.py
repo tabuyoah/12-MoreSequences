@@ -276,7 +276,7 @@ def draw_shapes(shapes, window):
       :type window:  rg.RoseWindow
     """
     # -------------------------------------------------------------------------
-    # TODO: 9. Implement and test this function.
+    # DONE: 9. Implement and test this function.
     #             *** Make sure you do _TODO_ 8 in main first! ***
     # The testing code is already written for you; you enabled it via _TODO_ 8.
     #
@@ -287,8 +287,10 @@ def draw_shapes(shapes, window):
     # FWIW: The word for ideas like this is "polymorphism".
     ###########################################################################
     # -------------------------------------------------------------------------
-
-
+    for k in range(len(shapes)):
+        s = shapes[k]
+        s.attach_to(window)
+    window.render()
 def run_test_rectangles_from_circles():
     """ Tests the   rectangles_from_circles    function. """
     print()
@@ -399,6 +401,11 @@ def rectangles_from_circles(circles):
     #            in this function, so DON'T draw anything in here!
     ###########################################################################
     # -------------------------------------------------------------------------
+    rect = []
+    for k in range(len(circles)):
+        circ = circles[k]
+        circ.attach_to()
+        rect = rg.Rectangle()
 
 
 # -----------------------------------------------------------------------------
