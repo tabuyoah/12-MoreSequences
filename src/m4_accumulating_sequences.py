@@ -291,6 +291,7 @@ def draw_shapes(shapes, window):
         s = shapes[k]
         s.attach_to(window)
     window.render()
+
 def run_test_rectangles_from_circles():
     """ Tests the   rectangles_from_circles    function. """
     print()
